@@ -1,7 +1,7 @@
 export const pages: Array<{ pageName: string; pageUrl: string }> = [
   {
     pageName: "Home",
-    pageUrl: "/home",
+    pageUrl: "",
   },
   {
     pageName: "About Me",
