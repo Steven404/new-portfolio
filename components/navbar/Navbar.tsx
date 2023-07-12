@@ -13,9 +13,9 @@ const Navbar = () => {
       <div>
         <span className="text-gray-900 font-semibold text-2xl ">Stefanos Michelakis</span>
       </div>
-      <div className="flex justify-items-center space-x-4 font-semibold text-gray-800">
+      <div className="flex justify-items-center space-x-4 font-semibold text-gray-900">
         {pages.map((page) => (
-          <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className="ease-in-out duration-700 h-fit bg-transparent text-lg py-2 px-3 cursor-pointer hover:bg-slate-100 hover:scale-110 hover:text-gray-950  rounded-3xl">
+          <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className="ease-in-out duration-700 h-fit bg-transparent text-lg py-2 px-3 cursor-pointer hover:bg-blue-100 hover:scale-110 rounded-3xl">
             {page.pageName}
           </button>
         ))}
