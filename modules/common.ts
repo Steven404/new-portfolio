@@ -1,4 +1,4 @@
-export const pages: Array<{ pageName: string; pageUrl: string }> = [
+export const pages = [
   {
     pageName: "Home",
     pageUrl: "",
@@ -19,4 +19,4 @@ export const pages: Array<{ pageName: string; pageUrl: string }> = [
     pageName: "Contact Info",
     pageUrl: "contactInfo",
   },
-];
+] as const;

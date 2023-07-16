@@ -1,10 +1,25 @@
 'use client';
 
 import { pages } from "@/modules/common";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname, useSearchParams } from "next/navigation";
+import { useEffect, useState } from "react";
+
+type PageUrl = typeof pages[number]['pageUrl'];
+
+const isActiveClass = (pageUrl: PageUrl, currentLocation: PageUrl):boolean => pageUrl === currentLocation;
 
 const Navbar = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+
+  const [activeLink, setActiveLink] = useState<PageUrl>(window.location.hash as PageUrl || '');
+
+  useEffect(() => {
+    setActiveLink(window.location.hash.split('#')[1] as PageUrl || '');
+  }, [searchParams]);
+
+
+  console.log(activeLink)
 
   const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`);
 
@@ -13,9 +28,9 @@ const Navbar = () => {
       <div>
         <span className="text-gray-900 font-semibold text-2xl ">Stefanos Michelakis</span>
       </div>
-      <div className="flex justify-items-center space-x-4 font-semibold text-gray-900">
-        {pages.map((page) => (
-          <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className="transition duration-700 h-fit bg-transparent text-lg py-2 px-3 cursor-pointer hover:bg-blue-100 hover:scale-110 rounded-3xl">
+      <div className="flex justify-items-center font-semibold text-gray-900">
+        {pages.map((page) => ( 
+          <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className={isActiveClass(page.pageUrl, activeLink) ? 'activeNavbarItem' : 'navbarItem'}>
             {page.pageName}
           </button>
         ))}
