@@ -1,5 +1,6 @@
 'use client';
 
+import { getMyRepos } from "@/modules/apiCalls";
 import { pages } from "@/modules/common";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -8,14 +9,22 @@ type PageUrl = typeof pages[number]['pageUrl'];
 
 const isActiveClass = (pageUrl: PageUrl, currentLocation: PageUrl):boolean => pageUrl === currentLocation;
 
+const getInitialActiveLink = (): PageUrl => {
+  if (window !== undefined) {
+    return window.location.hash as PageUrl || ''
+  } else return ''
+}
+
 const Navbar = () => {
   const router = useRouter();
   const searchParams = useSearchParams();
 
-  const [activeLink, setActiveLink] = useState<PageUrl>(window.location.hash as PageUrl || '');
+  const [activeLink, setActiveLink] = useState<PageUrl>(getInitialActiveLink());
 
   useEffect(() => {
-    setActiveLink(window.location.hash.split('#')[1] as PageUrl || '');
+    if (window !== undefined) {
+      setActiveLink(window.location.hash.split('#')[1] as PageUrl || '');
+    }
   }, [searchParams]);
 
 
