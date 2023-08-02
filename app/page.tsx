@@ -1,5 +1,7 @@
-const Home = () => {
-  return <div></div>;
+import Home from "@/pageParts/home/Home";
+
+const App = () => {
+  return <Home />;
 };
 
-export default Home;
+export default App;

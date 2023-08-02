@@ -2,9 +2,11 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pageParts/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  
   screens: {
     'mobile': '480px',
     // => @media (min-width: 480px) { ... }
@@ -23,7 +25,7 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       fontFamily: {
-        'source-sans3': ['Source Sans 3'],
+        'source-sans3': ["'Source Sans 3'", 'sans-serif'],
       }
     },
   },
