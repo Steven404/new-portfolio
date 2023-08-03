@@ -5,16 +5,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 @layer components {
-  .customTransition {
-    
-  }
-
   .navbarItem {
     @apply customTransition duration-500 ease-in-out h-fit text-lg py-2 px-3 cursor-pointer hover:bg-blue-100 hover:scale-110 hover:w-fit rounded-3xl hover:mx-2 ;
   }
   
   .activeNavbarItem {
     @apply customTransition duration-500 mx-3 ease-in-out scale-115 bg-blue-200 h-fit text-lg py-2 px-3 cursor-pointer rounded-3xl;
+  }
+
+  .description-text {
+    @apply text-lg leading-5 mt-4
   }
 }
 
@@ -27,7 +27,15 @@
     --tw-scale-x: 1.15;
     --tw-scale-y: 1.15;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
+  }
+
+  .h-15-vh {
+    height: 15vh;
+  }
+
+  .h-85-vh {
+    height: 85vh;
+  }
 }
 
 :root {

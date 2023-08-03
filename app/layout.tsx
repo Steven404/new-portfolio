@@ -15,10 +15,8 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      {/* Navbar has fixed height and possition (64px at top 0) so everything must be bellow that */}
-      <body className="h-full mt-16"> 
-        <Navbar />
-        {children}
+      <body> 
+        <Navbar>{children}</Navbar>
       </body>
     </html>
   );
