@@ -28,6 +28,12 @@ module.exports = {
         "clean-desk":"url('/img/bg-07.jpg')",
         "mac":"url('/img/bg-08.jpg')",
       },
+      colors: {
+        "custom-black": "#181818",
+        "custom-blue": "#176B87",
+        "custom-teal": "#64CCC5",
+        "custom-mint": "#DAFFFB",
+      },
       fontFamily: {
         'source-sans3': ["'Source Sans 3'", 'sans-serif'],
       }

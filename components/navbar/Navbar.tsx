@@ -28,8 +28,8 @@ const Navbar = ({children}: NavbarPropsType) => {
 
   return (
     <div className="font-source-sans3 bg-white-desk bg-cover">
-      <div className="flex w-full justify-between space-x-5 items-center px-4 z-50 h-[8vh] bg-white bg-opacity-75">
-        <span className="text-gray-900 font-semibold text-2xl">Stefanos Michelakis</span>
+      <div className="flex w-full justify-between space-x-5 items-center px-16 z-50 h-[8vh] bg-white bg-opacity-80">
+        <span className="text-gray-900 font-semibold text-2xl w-[170px]">SM</span>
         <div className="flex justify-items-center font-semibold text-gray-900">
           {pages.map((page) => ( 
             <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className={isActiveClass(page.pageUrl, activeLink) ? 'active-navbar-item' : 'navbar-item'}>
@@ -37,7 +37,10 @@ const Navbar = ({children}: NavbarPropsType) => {
             </button>
           ))}
         </div>
-        <button>test</button>
+        {/* 143px = 130 (button width) * 1.1 (the max scale of the button) */}
+        <div className="flex w-[170px] justify-end">
+          <button className="styled-button">Download my CV</button>
+        </div>
       </div>
       <div>
         {children}
