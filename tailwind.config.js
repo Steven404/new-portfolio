@@ -23,7 +23,10 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "clean-office":"url('/img/bg-04.jpg')",
+        "white-mountains":"url('/img/bg-05.jpg')",
         "white-desk":"url('/img/bg-06.jpg')",
+        "clean-desk":"url('/img/bg-07.jpg')",
+        "mac":"url('/img/bg-08.jpg')",
       },
       fontFamily: {
         'source-sans3': ["'Source Sans 3'", 'sans-serif'],

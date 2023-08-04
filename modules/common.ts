@@ -1,9 +1,5 @@
 export const pages = [
   {
-    pageName: "Home",
-    pageUrl: "",
-  },
-  {
     pageName: "About Me",
     pageUrl: "aboutMe",
   },

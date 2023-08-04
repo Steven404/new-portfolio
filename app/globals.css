@@ -5,11 +5,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
 @layer components {
-  .navbarItem {
-    @apply customTransition duration-500 ease-in-out h-fit text-lg py-2 px-3 cursor-pointer hover:bg-blue-100 hover:scale-110 hover:w-fit rounded-3xl hover:mx-2 ;
+  .navbar-item {
+    @apply customTransition duration-500 ease-in-out h-fit text-lg py-2 px-3 cursor-pointer hover:bg-blue-100 hover:scale-110 hover:w-fit rounded-3xl hover:mx-2;
   }
   
-  .activeNavbarItem {
+  .active-navbar-item {
     @apply customTransition duration-500 mx-3 ease-in-out scale-115 bg-blue-200 h-fit text-lg py-2 px-3 cursor-pointer rounded-3xl;
   }
 

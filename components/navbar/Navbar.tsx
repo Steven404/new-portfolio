@@ -4,7 +4,7 @@ import { pages } from "@/modules/common";
 import { useRouter, useParams } from "next/navigation";
 import { ReactNode, useEffect, useState } from "react";
 
-type PageUrl = typeof pages[number]['pageUrl'];
+type PageUrl = typeof pages[number]['pageUrl'] | '';
 
 const isActiveClass = (pageUrl: PageUrl, currentLocation: PageUrl):boolean => pageUrl === currentLocation;
 
@@ -32,11 +32,12 @@ const Navbar = ({children}: NavbarPropsType) => {
         <span className="text-gray-900 font-semibold text-2xl">Stefanos Michelakis</span>
         <div className="flex justify-items-center font-semibold text-gray-900">
           {pages.map((page) => ( 
-            <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className={isActiveClass(page.pageUrl, activeLink) ? 'activeNavbarItem' : 'navbarItem'}>
+            <button key={page.pageUrl} onClick={() => handleButtonClick(page.pageUrl)} className={isActiveClass(page.pageUrl, activeLink) ? 'active-navbar-item' : 'navbar-item'}>
               {page.pageName}
             </button>
           ))}
         </div>
+        <button>test</button>
       </div>
       <div>
         {children}
