@@ -1,36 +1,37 @@
 import { technologies } from '@/modules/common'
+import Text from '@/components/text/Text'
 
 const AboutMe = (): JSX.Element => {
   return (
     <div id="aboutMe" className="flex flex-col items-center h-screen ">
-      <span className="text-custom-black font-medium text-3xl mt-24">
+      <Text weight={500} size="xl" extra="mt-24">
         Who am I?
-      </span>
+      </Text>
       <div className="flex flex-col w-fit justify-around items-center">
         <div className="flex flex-col w-[1400px] justify-center items-center">
-          <span className="subtitle-text mt-10">
+          <Text size="xl" color="blue" extra="mt-10" weight={600}>
             I am a young and enthusiastic&nbsp;
             <i className="text-custom-black">full stack software engineer</i>
             &nbsp;always looking for new things to learn.
-          </span>
+          </Text>
           <div className="flex mt-8 justify-between">
-            <span className="w-[45%] description-text text-justify">
+            <Text size="sm" weight={500} extra="w-[45%] text-justify">
               With 2 years of expirience as a full stack software engineer, I
               specialize in developing fully functional web and mobile
               applications from start to finish. I strive to create modular
               and&nbsp;
-              <i className="text-custom-blue font-medium">
+              <i className="text-custom-blue font-semibold">
                 maintainable projects
-              </i>{' '}
-              that implement cutting edge technologies
-            </span>
+              </i>
+              &nbsp; that implement cutting edge technologies.
+            </Text>
             <div className="w-[45%] flex flex-col items-center">
-              <span className="text-2xl font-semibold">
+              <Text size="md" weight={600}>
                 Technologies I have worked with:
-              </span>
+              </Text>
               <ul className="list-disc marker:text-custom-blue mt-2">
                 {technologies.map((technology) => (
-                  <li className="description-text">{technology}</li>
+                  <li className="custom-li-item">{technology}</li>
                 ))}
               </ul>
             </div>
