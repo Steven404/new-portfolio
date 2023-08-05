@@ -16,3 +16,17 @@ export const pages = [
     pageUrl: 'contactInfo',
   },
 ] as const
+
+export const technologies: Array<string> = [
+  'ReactJS/NextJS',
+  'Angular 14',
+  'Rxjs',
+  'Typescript',
+  'Cypress',
+  'NodeJS',
+  'Express',
+  'GraphQL',
+  'MongoDB/Mongoose',
+  'Oracle SQL/MySQL',
+  'Jest',
+]
