@@ -36,6 +36,7 @@ module.exports = {
       },
       fontFamily: {
         'source-sans3': ["'Source Sans 3'", 'sans-serif'],
+        barlow: ["'Barlow'", 'sans-serif'],
       },
     },
     backdropBlur: {

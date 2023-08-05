@@ -4,7 +4,7 @@ const Home = (): JSX.Element => {
       <span className="text-custom-black font-semibold text-8xl">
         Stefanos Michelakis
       </span>
-      <span className="subtitle-text">Professional software engineer</span>
+      <span className="subtitle-text mt-8">Professional software engineer</span>
     </div>
   )
 }

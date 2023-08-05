@@ -28,7 +28,7 @@ const Navbar = ({ children }: NavbarPropsType) => {
   const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`)
 
   return (
-    <div className="font-source-sans3 bg-white-desk bg-cover h-screen">
+    <div className="font-barlow bg-white-desk bg-cover h-screen max-w-full">
       <div className="fixed flex w-full justify-between space-x-5 items-center px-16 z-50 h-[8vh] bg-white bg-opacity-80 shadow-xl backdrop-blur-sm">
         <span className="text-gray-900 font-semibold text-2xl w-[170px]">
           SM
@@ -56,5 +56,4 @@ const Navbar = ({ children }: NavbarPropsType) => {
     </div>
   )
 }
-
 export default Navbar
