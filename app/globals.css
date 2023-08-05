@@ -4,33 +4,55 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap');
 
+@layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
+}
+
 @layer components {
   .navbar-item {
     @apply custom-transition duration-300 ease-in-out h-fit text-lg py-2 px-3 cursor-pointer hover:text-custom-blue hover:scale-110 rounded-lg hover:mx-2;
   }
-  
+
   .active-navbar-item {
     @apply custom-transition duration-300 ease-in-out mx-3 scale-115 text-custom-blue h-fit text-lg py-2 px-3 cursor-pointer;
   }
 
-  .description-text {
-    @apply text-2xl leading-5 mt-4 text-custom-blue font-semibold;
+  .subtitle-text {
+    @apply text-2xl leading-5 mt-4 text-custom-blue font-medium;
   }
 
   .styled-button {
-    @apply custom-transition duration-300 ease-in-out h-fit text-lg font-semibold py-2 px-3 cursor-pointer rounded-lg bg-custom-teal hover:scale-105 hover:w-fit shadow hover:shadow-xl;
+    @apply custom-transition duration-300 ease-in-out h-fit text-lg font-semibold py-2 px-3 cursor-pointer rounded-lg bg-custom-teal hover:scale-105 hover:w-fit hover:shadow-md;
   }
 }
 
 @layer utilities {
   .custom-transition {
-    transition-property: background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter, margin-right, margin-left
+    transition-property:
+      background-color,
+      border-color,
+      text-decoration-color,
+      fill,
+      stroke,
+      opacity,
+      box-shadow,
+      transform,
+      filter,
+      backdrop-filter,
+      -webkit-backdrop-filter,
+      margin-right,
+      margin-left,
+      visibility;
   }
 
   .scale-115 {
     --tw-scale-x: 1.15;
     --tw-scale-y: 1.15;
-    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y))
+      rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y))
+      scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .h-15-vh {
