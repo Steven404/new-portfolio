@@ -11,9 +11,9 @@ const colors = {
 const sizes = {
   sm: 'text-xl',
   md: 'text-2xl',
-  xl: 'text-3xl',
-  xxl: 'text-4xl',
-  xxxl: 'text-5xl',
+  lg: 'text-3xl',
+  xl: 'text-4xl',
+  xxl: 'text-5xl',
   title: 'text-8xl',
 }
 
@@ -44,13 +44,7 @@ const Text = ({
 }: TextExtendedProps): JSX.Element => {
   return (
     <span
-      className={classNames(
-        sizes[size],
-        colors[color],
-        weights[weight],
-        size !== 'title' && 'leading-5',
-        extra
-      )}
+      className={classNames(sizes[size], colors[color], weights[weight], extra)}
       {...restProps}
     >
       {children}

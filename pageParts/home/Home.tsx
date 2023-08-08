@@ -7,8 +7,8 @@ const Home = (): JSX.Element => {
         Stefanos Michelakis
       </Text>
       {/* <span className="subtitle-text mt-8">Professional software engineer</span> */}
-      <Text weight={600} size="xl" color="blue" extra="mt-8">
-        Professional software enginee
+      <Text weight={600} size="xxl" color="blue" extra="mt-8">
+        Professional software engineer
       </Text>
     </div>
   )

@@ -1,5 +1,6 @@
 'use client'
 
+import Text from '../text/Text'
 import { pages } from '@/modules/common'
 import { useRouter, useParams } from 'next/navigation'
 import { ReactNode, useEffect, useState } from 'react'
@@ -29,10 +30,10 @@ const Navbar = ({ children }: NavbarPropsType) => {
 
   return (
     <div className="font-barlow bg-white-desk bg-cover h-screen max-w-full">
-      <div className="fixed flex w-full justify-between space-x-5 items-center px-16 z-50 h-[8vh] bg-white bg-opacity-80 shadow-xl backdrop-blur-sm">
-        <span className="text-gray-900 font-semibold text-2xl w-[170px]">
+      <div className="fixed flex w-screen justify-between space-x-5 items-center px-16 z-50 h-[8vh] bg-white bg-opacity-80 shadow-xl backdrop-blur-sm">
+        <Text size="md" extra="w-[170px]" weight={500}>
           SM
-        </span>
+        </Text>
         <div className="flex justify-items-center font-semibold text-gray-900">
           {pages.map((page) => (
             <button
@@ -52,7 +53,7 @@ const Navbar = ({ children }: NavbarPropsType) => {
           <button className="styled-button">Download my CV</button>
         </div>
       </div>
-      <div>{children}</div>
+      <div className="w-screen">{children}</div>
     </div>
   )
 }
