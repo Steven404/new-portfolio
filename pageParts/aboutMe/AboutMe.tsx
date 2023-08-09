@@ -5,7 +5,7 @@ import React from 'react'
 const AboutMe = React.forwardRef<HTMLDivElement>(
   (_, ref): JSX.Element => (
     <div ref={ref} id="aboutMe" className="flex flex-col items-center h-screen">
-      <Text weight={500} size="xl" extra="mt-28">
+      <Text weight={500} size="xl" extra="mt-24">
         Who am I?
       </Text>
       <div className="flex flex-col justify-around items-center px-60">
