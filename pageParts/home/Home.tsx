@@ -11,7 +11,6 @@ const Home = React.forwardRef<HTMLDivElement>(
       <Text weight={600} size="title">
         Stefanos Michelakis
       </Text>
-      {/* <span className="subtitle-text mt-8">Professional software engineer</span> */}
       <Text weight={600} size="xl" color="blue" extra="mt-8">
         Professional software engineer
       </Text>
