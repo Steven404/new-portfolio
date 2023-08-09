@@ -30,3 +30,5 @@ export const technologies: Array<string> = [
   'Oracle SQL/MySQL',
   'Jest',
 ]
+
+export type PageUrl = (typeof pages)[number]['pageUrl'] | ''

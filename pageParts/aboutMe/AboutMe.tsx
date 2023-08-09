@@ -1,13 +1,14 @@
 import { technologies } from '@/modules/common'
 import Text from '@/components/text/Text'
+import React from 'react'
 
-const AboutMe = (): JSX.Element => {
-  return (
-    <div id="aboutMe" className="flex flex-col items-center h-screen">
+const AboutMe = React.forwardRef<HTMLDivElement>(
+  (_, ref): JSX.Element => (
+    <div ref={ref} id="aboutMe" className="flex flex-col items-center h-screen">
       <Text weight={500} size="xl" extra="mt-28">
         Who am I?
       </Text>
-      <div className="flex flex-col w-fit justify-around items-center px-60">
+      <div className="flex flex-col justify-around items-center px-60">
         <div className="flex flex-col justify-center items-center">
           <Text size="xxl" color="blue" extra="mt-10" weight={500}>
             I am a young and enthusiastic&nbsp;
@@ -23,7 +24,7 @@ const AboutMe = (): JSX.Element => {
                 <i className="text-custom-blue font-semibold">
                   maintainable projects
                 </i>
-                &nbsp; that implement cutting edge technologies.
+                &nbsp;that implement cutting edge technologies.
               </Text>
               <Text size="sm" weight={400} extra="text-justify mt-5">
                 I thrive when working on my own but I excel when I'm cooperating
@@ -41,7 +42,9 @@ const AboutMe = (): JSX.Element => {
               </Text>
               <ul className="list-disc marker:text-custom-blue mt-2">
                 {technologies.map((technology) => (
-                  <li className="custom-li-item">{technology}</li>
+                  <li className="custom-li-item" key={technology}>
+                    {technology}
+                  </li>
                 ))}
               </ul>
             </div>
@@ -56,6 +59,8 @@ const AboutMe = (): JSX.Element => {
       </div>
     </div>
   )
-}
+)
+
+AboutMe.displayName = 'AboutMe'
 
 export default AboutMe
