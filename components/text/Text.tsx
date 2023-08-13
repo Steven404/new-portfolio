@@ -9,6 +9,7 @@ const colors = {
 }
 
 const sizes = {
+  xs: 'text-lg',
   sm: 'text-xl',
   md: 'text-2xl',
   lg: 'text-3xl',

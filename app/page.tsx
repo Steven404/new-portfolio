@@ -6,6 +6,7 @@ import { useRef, useState } from 'react'
 import { PageUrl, pages } from '@/modules/common'
 import { useParams, useRouter } from 'next/navigation'
 import Navbar from '@/components/navbar/Navbar'
+import WorkExperience from '@/pageParts/workExperience/WorkExperience'
 
 const App = () => {
   const refs = useRef<Array<HTMLDivElement | null>>(new Array())
@@ -15,7 +16,6 @@ const App = () => {
 
   const handleScroll = () => {
     if (refs.current && typeof window !== 'undefined') {
-      console.log('hi')
       refs.current.forEach((ref, index) => {
         if (
           ref &&
@@ -44,6 +44,7 @@ const App = () => {
       <Navbar activeLink={activeLink}>
         <Home ref={(element) => (refs.current[0] = element)} />
         <AboutMe ref={(element) => (refs.current[1] = element)} />
+        <WorkExperience ref={(element) => (refs.current[2] = element)} />
       </Navbar>
     </div>
   )
