@@ -15,7 +15,7 @@ const App = () => {
   const [activeLink, setActiveLink] = useState<PageUrl>('')
 
   const handleScroll = () => {
-    if (refs.current && typeof window !== 'undefined') {
+    if (refs.current) {
       refs.current.forEach((ref, index) => {
         if (
           ref &&
@@ -26,15 +26,6 @@ const App = () => {
       })
     }
   }
-
-  // useEffect(() => {
-  //   if (refs.current && typeof window !== 'undefined') {
-  //     const sectionToJumpTo = window.location.hash.split('#')[1]
-  //     const coorespondingPageIndex =
-  //       pages.findIndex((page) => page.pageUrl === sectionToJumpTo) + 1
-  //     refs.current[coorespondingPageIndex]?.scrollIntoView()
-  //   }
-  // }, [params])
 
   return (
     <div
