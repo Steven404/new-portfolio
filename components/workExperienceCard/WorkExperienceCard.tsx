@@ -36,6 +36,13 @@ const WorkExperienceCard = ({
           <Text size="sm" weight={500}>
             Role responsibilities:
           </Text>
+          <ul className="list-disc list-inside pl-[8px] marker:text-custom-blue mt-2">
+            {workExperience.responsibilities.map((technology) => (
+              <li className="work-experience-li-item" key={technology}>
+                {technology}
+              </li>
+            ))}
+          </ul>
         </div>
       ) : null}
     </div>

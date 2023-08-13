@@ -4,7 +4,11 @@ import React from 'react'
 
 const AboutMe = React.forwardRef<HTMLDivElement>(
   (_, ref): JSX.Element => (
-    <div ref={ref} id="aboutMe" className="flex flex-col items-center h-screen">
+    <div
+      ref={ref}
+      id="aboutMe"
+      className="flex flex-col items-center min-h-screen"
+    >
       <Text weight={500} size="xl" extra="mt-24">
         Who am I?
       </Text>
@@ -15,7 +19,7 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
             <i className="text-custom-black">full stack software engineer</i>
           </Text>
           <div className="flex mt-8 justify-between">
-            <div className="flex flex-col w-[50%]">
+            <div className="flex flex-col w-[45%]">
               <Text size="md" weight={500} extra="text-justify">
                 With 2 years of expirience as a full stack software engineer, I
                 specialize in developing fully functional web and mobile
@@ -42,7 +46,7 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
               </Text>
               <ul className="list-disc marker:text-custom-blue mt-2">
                 {technologies.map((technology) => (
-                  <li className="custom-li-item" key={technology}>
+                  <li className="about-me-li-item" key={technology}>
                     {technology}
                   </li>
                 ))}
@@ -51,10 +55,10 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
           </div>
         </div>
       </div>
-      <div className="flex w-full h-40 bg-custom-teal bg-opacity-30 mt-10 justify-center items-center">
+      <div className="flex w-full min-h-[120px] bg-custom-teal bg-opacity-30 mt-20 justify-center items-center">
         <Text weight={500} size="lg">
-          Always eager and excited for new projects and growth opportunities
-          learn.
+          Always eager and excited for new projects and technologies to learn
+          from.
         </Text>
       </div>
     </div>
