@@ -31,12 +31,32 @@
     @apply custom-transition duration-300 ease-in-out h-fit text-lg font-semibold py-2 px-3 cursor-pointer rounded-lg bg-custom-teal hover:scale-105 hover:w-fit hover:shadow-md;
   }
 
+  .work-experience-card {
+    @apply custom-transition duration-300 flex flex-col h-fit shadow-md p-5 w-[420px] hover:shadow-xl rounded-lg bg-custom-teal bg-opacity-25 hover:scale-105;
+  }
+
   .about-me-li-item {
     @apply custom-transition duration-300 ease-in-out rounded-md text-2xl leading-7 font-medium mt-2 cursor-default hover:scale-105 hover:bg-custom-teal hover:bg-opacity-25;
   }
 
   .work-experience-li-item {
     @apply text-lg;
+  }
+
+  .responsibilities-hidden {
+    @apply custom-transition delay-300 duration-300 max-h-[0] overflow-hidden opacity-0;
+  }
+
+  .responsibilities {
+    @apply custom-transition delay-300 duration-500 max-h-[600px] overflow-hidden;
+  }
+
+  .hover-me-text {
+    @apply custom-transition delay-300 duration-300 max-h-[25px] mt-2.5;
+  }
+
+  .hover-me-text-hidden {
+    @apply custom-transition delay-300 duration-500 mt-2.5 max-h-0 opacity-0;
   }
 }
 
@@ -56,6 +76,7 @@
       -webkit-backdrop-filter,
       margin-right,
       margin-left,
+      max-height,
       visibility;
   }
 

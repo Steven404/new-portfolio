@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 const colors = {
   black: 'text-custom-black',
+  halfBlack: 'text-custom-black/[0.5]',
   blue: 'text-custom-blue',
   teal: 'text-custom-teal',
   mint: 'text-custom-mint',
@@ -32,6 +33,7 @@ interface TextExtendedProps extends React.ComponentProps<'span'> {
   size?: keyof typeof sizes
   weight?: keyof typeof weights
   extra?: string // This prop is to add things like padding and margin.
+  // opacity?: '.1' | '.2' | '.3' | '.4' | '.05' | '.6' | '.7' | '.8' | '.9' TODO: Find a way to make opacity modular
   // You can get the intellisense by going to the tailwind intellisense extention and adding 'extra' as an item
 }
 
@@ -43,6 +45,8 @@ const Text = ({
   extra,
   ...restProps
 }: TextExtendedProps): JSX.Element => {
+  // const getColor = () => `${colors[color]}${opacity ? `/[${opacity}]` : ''}`
+
   return (
     <span
       className={classNames(sizes[size], colors[color], weights[weight], extra)}

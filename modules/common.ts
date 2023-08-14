@@ -51,6 +51,10 @@ export const workExperience: Array<WorkExperienceType> = [
     description:
       'I am currently working as a Full Stack Software engineer, working in a team that maintains and develops features for a web platform with thousands of daily active users.',
     dateStarted: new Date('05/15/2023'),
+    responsibilities: [
+      'Develop HTML/CSS/JavaScript code as a front-end Engineer',
+      'Build back-end software using NodeJS, express and MongoDB.',
+    ],
   },
   {
     employer: 'Flarmio',

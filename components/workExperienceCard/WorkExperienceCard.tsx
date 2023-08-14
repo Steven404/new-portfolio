@@ -1,5 +1,6 @@
 import { WorkExperienceType } from '@/modules/common'
 import Text from '../text/Text'
+import { useState } from 'react'
 
 interface WorkExperienceCardPropsType {
   workExperience: WorkExperienceType
@@ -13,8 +14,13 @@ const formatDate = (date: Date) =>
 const WorkExperienceCard = ({
   workExperience,
 }: WorkExperienceCardPropsType): JSX.Element => {
+  const [isHovered, setIsHovered] = useState<boolean>(false)
   return (
-    <div className="flex flex-col shadow-md p-5 w-[420px] hover:shadow-xl rounded-lg">
+    <div
+      className="work-experience-card"
+      onMouseOver={() => setIsHovered(true)}
+      onMouseOut={() => setIsHovered(false)}
+    >
       <Text size="lg" weight={500}>
         {workExperience.jobTitle}
       </Text>
@@ -25,14 +31,26 @@ const WorkExperienceCard = ({
       <Text size="xs" extra="text-justify mt-2.5">
         {workExperience.description}
       </Text>
-      <Text size="xs" extra="mt-2.5">
-        From - Until: {formatDate(workExperience.dateStarted)} -{' '}
-        {workExperience?.dateEnded
-          ? formatDate(workExperience.dateEnded)
-          : 'Ongoing'}
-      </Text>
+      <div className="mt-2.5">
+        <Text size="xs" weight={500}>
+          From - Until:&nbsp;
+        </Text>
+        <Text size="xs">
+          {formatDate(workExperience.dateStarted)} -&nbsp;
+          {workExperience?.dateEnded
+            ? formatDate(workExperience.dateEnded)
+            : 'Ongoing'}
+        </Text>
+      </div>
+      <div className={isHovered ? 'hover-me-text-hidden' : 'hover-me-text'}>
+        <Text size="sm" weight={500} color="halfBlack">
+          Hover me!
+        </Text>
+      </div>
       {workExperience?.responsibilities ? (
-        <div className="mt-2.5">
+        <div
+          className={isHovered ? 'responsibilities' : 'responsibilities-hidden'}
+        >
           <Text size="sm" weight={500}>
             Role responsibilities:
           </Text>
@@ -44,7 +62,15 @@ const WorkExperienceCard = ({
             ))}
           </ul>
         </div>
-      ) : null}
+      ) : (
+        <div
+          className={isHovered ? 'responsibilities' : 'responsibilities-hidden'}
+        >
+          <Text size="sm" weight={500}>
+            Nothing to show...
+          </Text>
+        </div>
+      )}
     </div>
   )
 }
