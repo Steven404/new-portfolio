@@ -10,7 +10,6 @@ import WorkExperience from '@/pageParts/workExperience/WorkExperience'
 
 const App = () => {
   const refs = useRef<Array<HTMLDivElement | null>>(new Array())
-  const params = useParams()
 
   const [activeLink, setActiveLink] = useState<PageUrl>('')
 
