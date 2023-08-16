@@ -35,6 +35,7 @@ export const technologies: Array<string> = [
 
 export interface WorkExperienceType {
   employer: string
+  employerLink: string
   jobTitle: string
   location: string
   description: string
@@ -46,6 +47,7 @@ export interface WorkExperienceType {
 export const workExperience: Array<WorkExperienceType> = [
   {
     employer: 'Valmore Technologies',
+    employerLink: 'https://www.valmore.gr/',
     jobTitle: 'Full Stack Software Engineer',
     location: 'Remote',
     description:
@@ -59,6 +61,7 @@ export const workExperience: Array<WorkExperienceType> = [
   },
   {
     employer: 'Flarmio',
+    employerLink: 'https://www.flarmio.com/',
     jobTitle: 'Software Engineer',
     location: 'Remote',
     description:
@@ -76,6 +79,7 @@ export const workExperience: Array<WorkExperienceType> = [
   },
   {
     employer: 'Municipality of Thermaikos',
+    employerLink: 'https://www.thermaikos.gr/',
     jobTitle: 'IT Support (Internship)',
     location: 'Neoi Epivates, Thessaloniki, Greece',
     description:

@@ -26,7 +26,13 @@ const WorkExperienceCard = ({
       </Text>
       <Text size="sm" weight={500} extra="mt-2.5">
         Employer:&nbsp;
-        <span className="text-custom-blue">{workExperience.employer}</span>
+        <a
+          className="text-custom-blue"
+          href={workExperience.employerLink}
+          target="blank"
+        >
+          {workExperience.employer}
+        </a>
       </Text>
       <Text size="xs" extra="text-justify mt-2.5">
         {workExperience.description}
