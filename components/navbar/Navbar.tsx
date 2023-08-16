@@ -13,6 +13,12 @@ interface NavbarPropsType {
   activeLink: PageUrl
 }
 
+const downloadCV = () => {
+  if (typeof window !== 'undefined') {
+    window.location.href = '/CV.pdf'
+  }
+}
+
 const Navbar = ({ children, activeLink }: NavbarPropsType) => {
   const router = useRouter()
 
@@ -40,7 +46,9 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
           ))}
         </div>
         <div className="flex w-[170px] justify-end">
-          <button className="styled-button">Download my CV</button>
+          <a className="styled-button" href="/CV.pdf" target="blank">
+            Download my CV
+          </a>
         </div>
       </div>
       <div>{children}</div>
