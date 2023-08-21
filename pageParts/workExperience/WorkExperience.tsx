@@ -14,7 +14,7 @@ const WorkExperience = React.forwardRef<HTMLDivElement>(
       <Text weight={500} size="xl" extra="mt-24">
         Work Experience
       </Text>
-      <div className="flex space-x-16 mt-10">
+      <div className="flex space-x-16 mt-10 md:flex-col md:space-x-0">
         {workExperience.map((we) => (
           <WorkExperienceCard workExperience={we} key={we.employer} />
         ))}

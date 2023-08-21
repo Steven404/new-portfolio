@@ -27,10 +27,7 @@ const App = () => {
   }
 
   return (
-    <div
-      onScroll={handleScroll}
-      className="h-screen overflow-y-auto scroll-smooth"
-    >
+    <div onScroll={handleScroll} className="h-screen scroll-smooth">
       <Navbar activeLink={activeLink}>
         <Home ref={(element) => (refs.current[0] = element)} />
         <AboutMe ref={(element) => (refs.current[1] = element)} />

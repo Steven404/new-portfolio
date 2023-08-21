@@ -11,12 +11,74 @@
 }
 
 @layer components {
+  .navbar {
+    @apply fixed 
+    flex
+    w-screen
+    justify-between
+    space-x-5
+    items-center
+    px-16
+    z-50
+    h-[8vh]
+    bg-white
+    bg-opacity-80 
+    shadow-xl
+    backdrop-blur-sm
+
+    lg:hidden;
+  }
+
+  .burger-svg {
+    @apply w-12 h-12
+    fixed
+    left-5
+    z-10
+    top-5;
+  }
+
+  .dropdown-menu {
+    @apply min-lg:hidden
+    fixed
+    flex
+    flex-col
+    items-center
+    justify-center
+    w-screen
+    bg-custom-mint
+    backdrop-blur-sm 
+    bg-opacity-80
+    h-screen;
+  }
+
   .navbar-item {
-    @apply custom-transition duration-300 ease-in-out h-fit text-lg py-2 px-3 cursor-pointer hover:text-custom-blue hover:scale-110 rounded-lg hover:mx-2;
+    @apply custom-transition
+    duration-300
+    ease-in-out
+    h-fit
+    text-lg
+    py-2 px-3
+    cursor-pointer
+    whitespace-nowrap
+    betterhover:hover:text-custom-blue
+    betterhover:hover:scale-110
+    rounded-lg
+    betterhover:hover:mx-2;
   }
 
   .active-navbar-item {
-    @apply custom-transition duration-300 ease-in-out mx-3 scale-115 text-custom-blue h-fit text-lg py-2 px-3 cursor-pointer;
+    @apply custom-transition
+    duration-300
+    ease-in-out
+    mx-3
+    scale-115
+    text-custom-blue
+    whitespace-nowrap
+    h-fit
+    text-lg
+    py-2
+    px-3
+    cursor-pointer;
   }
 
   .subtitle-text {
@@ -28,15 +90,56 @@
   }
 
   .styled-button {
-    @apply custom-transition duration-300 ease-in-out h-fit text-lg font-semibold py-2 px-3 cursor-pointer rounded-lg bg-custom-teal hover:scale-105 hover:w-fit hover:shadow-md;
+    @apply custom-transition
+    duration-300
+    ease-in-out
+    h-fit
+    text-lg
+    font-semibold
+    py-2
+    px-3
+    cursor-pointer
+    rounded-lg
+    bg-custom-teal
+    betterhover:hover:scale-105
+    betterhover:hover:w-fit
+    betterhover:hover:shadow-md
+    
+    sm:fixed
+    sm:bottom-20;
   }
 
   .work-experience-card {
-    @apply custom-transition duration-300 flex flex-col h-fit shadow-md p-5 w-[420px] hover:shadow-xl rounded-lg bg-custom-teal bg-opacity-25 hover:scale-105;
+    @apply custom-transition
+    duration-300
+    flex
+    flex-col
+    h-fit
+    shadow-md
+    p-5
+    w-[420px]
+    betterhover:hover:shadow-xl
+    rounded-lg
+    bg-custom-teal
+    bg-opacity-25
+    betterhover:hover:scale-105
+    
+    sm:max-w-[85vw];
   }
 
   .about-me-li-item {
-    @apply custom-transition duration-300 ease-in-out rounded-md text-2xl leading-7 font-medium mt-2 cursor-default hover:scale-105 hover:bg-custom-teal hover:bg-opacity-25;
+    @apply custom-transition
+    duration-300
+    ease-in-out
+    rounded-md
+    text-2xl
+    leading-7
+    font-medium
+    mt-2
+    cursor-default
+    betterhover:hover:scale-105
+    betterhover:hover:bg-custom-teal
+    betterhover:hover:bg-opacity-25;
   }
 
   .work-experience-li-item {
@@ -44,7 +147,12 @@
   }
 
   .responsibilities-hidden {
-    @apply custom-transition delay-300 duration-300 max-h-[0] overflow-hidden opacity-0;
+    @apply custom-transition
+    delay-300
+    duration-300
+    max-h-[0]
+    overflow-hidden
+    opacity-0;
   }
 
   .responsibilities {

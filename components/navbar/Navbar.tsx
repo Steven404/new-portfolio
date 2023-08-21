@@ -25,9 +25,39 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
   const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`)
 
   return (
-    <div className="font-barlow h-screen max-w-full">
-      <div className="fixed flex w-screen justify-between space-x-5 items-center px-16 z-50 h-[8vh] bg-white bg-opacity-80 shadow-xl backdrop-blur-sm">
-        <Text size="md" extra="w-[170px]" weight={500}>
+    <div className="font-barlow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2.5}
+        stroke="#176B87"
+        className="burger-svg"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+        />
+      </svg>
+      <div className="dropdown-menu">
+        <div className="flex flex-col items-center justify-center space-y-6 font-semibold text-gray-900 ">
+          {pages.map((page) => (
+            <span
+              key={page.pageUrl}
+              onClick={() => handleButtonClick(page.pageUrl)}
+              className="navbar-item"
+            >
+              {page.pageName}
+            </span>
+          ))}
+        </div>
+        <a className="styled-button" href="/CV.pdf" target="blank">
+          Download my CV
+        </a>
+      </div>
+      <div className="navbar">
+        <Text size="md" extra="w-[170px] lg:text-xl" weight={500}>
           SM
         </Text>
         <div className="flex justify-items-center font-semibold text-gray-900">
@@ -51,6 +81,7 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
           </a>
         </div>
       </div>
+
       <div>{children}</div>
     </div>
   )
