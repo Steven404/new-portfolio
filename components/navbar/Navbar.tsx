@@ -22,7 +22,12 @@ const downloadCV = () => {
 const Navbar = ({ children, activeLink }: NavbarPropsType) => {
   const router = useRouter()
 
+  const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false)
+
   const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`)
+
+  const handleBurgerClick = () =>
+    setIsDropdownShown((currentState) => !currentState)
 
   return (
     <div className="font-barlow">
@@ -33,6 +38,7 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
         strokeWidth={2.5}
         stroke="#176B87"
         className="burger-svg"
+        onClick={handleBurgerClick}
       >
         <path
           strokeLinecap="round"
@@ -40,7 +46,11 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
           d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </svg>
-      <div className="dropdown-menu">
+      <div
+        className={
+          isDropdownShown ? 'dropdown-menu' : 'max-h-0 overflow-hidden'
+        }
+      >
         <div className="flex flex-col items-center justify-center space-y-6 font-semibold text-gray-900 ">
           {pages.map((page) => (
             <span
