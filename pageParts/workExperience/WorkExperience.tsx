@@ -4,7 +4,7 @@ import { workExperience } from '@/modules/common'
 import React from 'react'
 
 const WorkExperience = React.forwardRef<HTMLDivElement>(
-  // if Home had props, then they would replace the _ before the ,ref
+  // if WorkExperience had props, then they would replace the _ before the ,ref
   (_, ref): JSX.Element => (
     <div
       id="workExperience"

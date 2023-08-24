@@ -7,6 +7,7 @@ import { PageUrl, pages } from '@/modules/common'
 import { useParams, useRouter } from 'next/navigation'
 import Navbar from '@/components/navbar/Navbar'
 import WorkExperience from '@/pageParts/workExperience/WorkExperience'
+import MyProjects from '@/pageParts/myProjects/MyProjects'
 
 const App = () => {
   const refs = useRef<Array<HTMLDivElement | null>>(new Array())
@@ -26,12 +27,18 @@ const App = () => {
     }
   }
 
+  console.log(activeLink)
+
   return (
-    <div onScroll={handleScroll} className="h-screen scroll-smooth">
+    <div
+      onScroll={handleScroll}
+      className="h-screen overflow-y-scroll scroll-smooth"
+    >
       <Navbar activeLink={activeLink}>
         <Home ref={(element) => (refs.current[0] = element)} />
         <AboutMe ref={(element) => (refs.current[1] = element)} />
         <WorkExperience ref={(element) => (refs.current[2] = element)} />
+        <MyProjects ref={(element) => (refs.current[3] = element)} />
       </Navbar>
     </div>
   )

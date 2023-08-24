@@ -27,6 +27,7 @@ module.exports = {
         'white-desk': "url('/img/bg-06.jpg')",
         'clean-desk': "url('/img/bg-07.jpg')",
         mac: "url('/img/bg-08.jpg')",
+        'under-construction': "url('/under_construction.svg')",
       },
       colors: {
         'custom-black': '#181818',

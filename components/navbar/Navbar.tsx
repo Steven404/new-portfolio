@@ -2,8 +2,9 @@
 
 import Text from '../text/Text'
 import { PageUrl, pages } from '@/modules/common'
-import { useRouter, useParams } from 'next/navigation'
-import { ReactNode, useEffect, useState } from 'react'
+import { useRouter } from 'next/navigation'
+import { ReactNode, useState } from 'react'
+import { Squash as Hamburger } from 'hamburger-react'
 
 const isActiveClass = (pageUrl: PageUrl, currentLocation: PageUrl): boolean =>
   pageUrl === currentLocation
@@ -13,12 +14,6 @@ interface NavbarPropsType {
   activeLink: PageUrl
 }
 
-const downloadCV = () => {
-  if (typeof window !== 'undefined') {
-    window.location.href = '/CV.pdf'
-  }
-}
-
 const Navbar = ({ children, activeLink }: NavbarPropsType) => {
   const router = useRouter()
 
@@ -26,43 +21,49 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
 
   const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`)
 
-  const handleBurgerClick = () =>
-    setIsDropdownShown((currentState) => !currentState)
+  const handleButtonClickMobile = (pageUrl: string) => {
+    handleButtonClick(pageUrl)
+    setTimeout(() => setIsDropdownShown(false), 500)
+  }
 
   return (
     <div className="font-barlow">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        strokeWidth={2.5}
-        stroke="#176B87"
-        className="burger-svg"
-        onClick={handleBurgerClick}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+      <div className="burger-svg">
+        <Hamburger
+          size={40}
+          distance="sm"
+          duration={0.5}
+          color="#176B87"
+          toggled={isDropdownShown}
+          toggle={setIsDropdownShown}
         />
-      </svg>
+      </div>
+      <div className="mobile-navbar">
+        <div className="mobile-title">
+          <Text size="lg" weight={500} color="blue">
+            SM
+          </Text>
+        </div>
+      </div>
       <div
-        className={
-          isDropdownShown ? 'dropdown-menu' : 'max-h-0 overflow-hidden'
-        }
+        className={isDropdownShown ? 'dropdown-menu' : 'dropdown-menu-hidden'}
       >
         <div className="flex flex-col items-center justify-center space-y-6 font-semibold text-gray-900 ">
           {pages.map((page) => (
             <span
               key={page.pageUrl}
-              onClick={() => handleButtonClick(page.pageUrl)}
+              onClick={() => handleButtonClickMobile(page.pageUrl)}
               className="navbar-item"
             >
               {page.pageName}
             </span>
           ))}
         </div>
-        <a className="styled-button" href="/CV.pdf" target="blank">
+        <a
+          className={isDropdownShown ? 'styled-button' : 'styled-button-hidden'}
+          href="/CV.pdf"
+          target="blank"
+        >
           Download my CV
         </a>
       </div>
@@ -91,7 +92,6 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
           </a>
         </div>
       </div>
-
       <div>{children}</div>
     </div>
   )

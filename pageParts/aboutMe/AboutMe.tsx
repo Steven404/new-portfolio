@@ -13,13 +13,13 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
         Who am I?
       </Text>
       <div className="flex flex-col justify-around items-center">
-        <div className="flex flex-col justify-center items-center">
-          <Text size="xl" color="blue" extra="mt-6" weight={500}>
+        <div className="flex flex-col justify-center items-center lg:px-6">
+          <Text size="lg" color="blue" extra="mt-6 lg:text-2xl" weight={500}>
             I am a young and enthusiastic&nbsp;
             <i className="text-custom-black">full stack software engineer</i>
           </Text>
-          <div className="flex mt-12 justify-center px-16 lg:flex-col lg:items-center lg:px-10">
-            <div className="w-[600px] flex flex-col xl:w-[50%] lg:w-[95%]">
+          <div className="flex mt-12 justify-center px-16 lg:flex-col lg:items-center lg:px-0">
+            <div className="w-[600px] flex flex-col xl:w-[50%] lg:w-[100%]">
               <Text size="md" weight={500} extra="text-justify">
                 With 2 years of expirience as a full stack software engineer, I
                 specialize in developing fully functional web and mobile
@@ -56,10 +56,9 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
           </div>
         </div>
       </div>
-      <div className="flex w-full min-h-[120px] bg-custom-teal bg-opacity-30 mt-20 justify-center items-center">
-        <Text weight={500} size="lg">
-          Always eager and excited for new projects and technologies to learn
-          from.
+      <div className="flex w-full min-h-[120px] bg-custom-teal bg-opacity-30 mt-20 justify-center items-center lg:px-4">
+        <Text weight={500} size="lg" extra="text-justify lg:text-2xl">
+          Always on the look for new projects and technologies to learn from.
         </Text>
       </div>
     </div>

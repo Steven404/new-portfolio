@@ -29,37 +29,49 @@
     lg:hidden;
   }
 
-  .burger-svg {
-    @apply w-12 h-12
+  .mobile-navbar {
+    @apply min-lg:hidden 
     fixed
-    left-5
-    z-10
-    top-5;
+    flex
+    items-end
+    py-2
+    px-5
+    z-20
+    w-full
+    
+    shadow-xl
+    bg-custom-mint
+    backdrop-blur-sm 
+    bg-opacity-80;
+  }
+
+  .mobile-title {
+    @apply w-[48px] h-[48px]
+    flex justify-center items-center;
+  }
+
+  .burger-svg {
+    @apply fixed 
+    z-40
+    right-0
+    top-0
+    py-2
+    px-5;
   }
 
   .dropdown-menu {
-    @apply min-lg:hidden
-    fixed
-    flex
-    flex-col
-    items-center
-    justify-center
-    w-screen
-    bg-custom-mint
-    backdrop-blur-sm 
-    bg-opacity-80
-    h-screen;
+    @apply dropdown-menu-common
+    max-h-full;
+  }
+
+  .dropdown-menu-hidden {
+    @apply dropdown-menu-common
+    delay-300
+    max-h-0;
   }
 
   .navbar-item {
-    @apply custom-transition
-    duration-300
-    ease-in-out
-    h-fit
-    text-lg
-    py-2 px-3
-    cursor-pointer
-    whitespace-nowrap
+    @apply navbar-item-common
     betterhover:hover:text-custom-blue
     betterhover:hover:scale-110
     rounded-lg
@@ -67,18 +79,10 @@
   }
 
   .active-navbar-item {
-    @apply custom-transition
-    duration-300
-    ease-in-out
+    @apply navbar-item-common
     mx-3
     scale-115
-    text-custom-blue
-    whitespace-nowrap
-    h-fit
-    text-lg
-    py-2
-    px-3
-    cursor-pointer;
+    text-custom-blue;
   }
 
   .subtitle-text {
@@ -90,23 +94,18 @@
   }
 
   .styled-button {
-    @apply custom-transition
+    @apply styled-button-common
+    delay-500
     duration-300
-    ease-in-out
-    h-fit
-    text-lg
-    font-semibold
-    py-2
-    px-3
-    cursor-pointer
-    rounded-lg
-    bg-custom-teal
-    betterhover:hover:scale-105
-    betterhover:hover:w-fit
-    betterhover:hover:shadow-md
-    
-    sm:fixed
-    sm:bottom-20;
+    bottom-[120px];
+  }
+
+  .styled-button-hidden {
+    @apply styled-button-common
+
+    duration-300
+
+    lg:bottom-[-120px];
   }
 
   .work-experience-card {
@@ -185,7 +184,57 @@
       margin-right,
       margin-left,
       max-height,
+      bottom,
       visibility;
+  }
+
+  .dropdown-menu-common {
+    @apply min-lg:hidden
+    overflow-hidden
+    custom-transition
+    duration-500
+    ease-in-out
+    fixed
+    flex
+    flex-col
+    items-center
+    justify-center
+    w-screen
+    bg-custom-mint
+    backdrop-blur-sm 
+    bg-opacity-80
+    z-30
+    h-screen;
+  }
+
+  .navbar-item-common {
+    @apply custom-transition
+    duration-300
+    ease-in-out
+    h-fit
+    text-lg
+    py-2 px-3
+    whitespace-nowrap
+    cursor-pointer;
+  }
+
+  .styled-button-common {
+    @apply custom-transition
+
+    ease-in-out
+    h-fit
+    text-lg
+    font-semibold
+    py-2
+    px-3
+    cursor-pointer
+    rounded-lg
+    bg-custom-teal
+    betterhover:hover:scale-105
+    betterhover:hover:w-fit
+    betterhover:hover:shadow-md
+    
+    lg:fixed;
   }
 
   .scale-115 {
@@ -215,4 +264,49 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+}
+
+/* css for burger button */
+
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: black;
+  stroke-width: 6;
+  transition:
+    stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
 }
