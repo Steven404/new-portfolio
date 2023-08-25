@@ -30,12 +30,15 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
     <div className="font-barlow">
       <div className="burger-svg">
         <Hamburger
-          size={40}
+          size={42}
           distance="sm"
+          rounded
           duration={0.5}
           color="#176B87"
           toggled={isDropdownShown}
           toggle={setIsDropdownShown}
+          easing="ease-in"
+          hideOutline
         />
       </div>
       <div className="mobile-navbar">
