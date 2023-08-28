@@ -1,7 +1,7 @@
-import Text from '@/components/text/Text'
-import WorkExperienceCard from '@/components/workExperienceCard/WorkExperienceCard'
-import { workExperience } from '@/modules/common'
-import React from 'react'
+import Text from '@/components/text/Text';
+import WorkExperienceCard from '@/components/workExperienceCard/WorkExperienceCard';
+import { workExperience } from '@/modules/common';
+import React from 'react';
 
 const WorkExperience = React.forwardRef<HTMLDivElement>(
   // if WorkExperience had props, then they would replace the _ before the ,ref
@@ -14,15 +14,15 @@ const WorkExperience = React.forwardRef<HTMLDivElement>(
       <Text weight={500} size="xl" extra="mt-24">
         Work Experience
       </Text>
-      <div className="flex space-x-16 mt-10 md:flex-col md:space-x-0">
+      <div className="flex flex-wrap gap-20 mt-10 justify-evenly ">
         {workExperience.map((we) => (
           <WorkExperienceCard workExperience={we} key={we.employer} />
         ))}
       </div>
     </div>
   )
-)
+);
 
-WorkExperience.displayName = 'WorkExperience'
+WorkExperience.displayName = 'WorkExperience';
 
-export default WorkExperience
+export default WorkExperience;
