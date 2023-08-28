@@ -71,7 +71,7 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
         </a>
       </div>
       <div className="navbar">
-        <Text size="md" extra="w-[170px] lg:text-xl" weight={500}>
+        <Text size="lg" extra="w-[170px]" weight={500}>
           SM
         </Text>
         <div className="flex justify-items-center font-semibold text-gray-900">
