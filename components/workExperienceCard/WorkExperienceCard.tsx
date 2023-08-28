@@ -1,20 +1,25 @@
-import { WorkExperienceType } from '@/modules/common'
-import Text from '../text/Text'
-import { useState } from 'react'
+import { WorkExperienceType } from '@/modules/common';
+import Text from '../text/Text';
+import { useState } from 'react';
+
+import useWindowDimensions from '@/modules/useWindowDimensions';
 
 interface WorkExperienceCardPropsType {
-  workExperience: WorkExperienceType
+  workExperience: WorkExperienceType;
 }
 
 const formatDate = (date: Date) =>
   `${String(date.getDate()).padStart(2, '0')}/${String(
     date.getMonth() + 1
-  ).padStart(2, '0')}/${date.getFullYear()}`
+  ).padStart(2, '0')}/${date.getFullYear()}`;
 
 const WorkExperienceCard = ({
   workExperience,
 }: WorkExperienceCardPropsType): JSX.Element => {
-  const [isHovered, setIsHovered] = useState<boolean>(false)
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  const { width, height } = useWindowDimensions();
+
   return (
     <div
       className="work-experience-card"
@@ -48,14 +53,22 @@ const WorkExperienceCard = ({
             : 'Ongoing'}
         </Text>
       </div>
-      <div className={isHovered ? 'hover-me-text-hidden' : 'hover-me-text'}>
+      <div
+        className={
+          isHovered || width < 1023 ? 'hover-me-text-hidden' : 'hover-me-text'
+        }
+      >
         <Text size="sm" weight={500} color="halfBlack">
           Hover me!
         </Text>
       </div>
       {workExperience?.responsibilities ? (
         <div
-          className={isHovered ? 'responsibilities' : 'responsibilities-hidden'}
+          className={
+            isHovered || width < 1023
+              ? 'responsibilities'
+              : 'responsibilities-hidden'
+          }
         >
           <Text size="sm" weight={500}>
             Role responsibilities:
@@ -78,7 +91,7 @@ const WorkExperienceCard = ({
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default WorkExperienceCard
+export default WorkExperienceCard;

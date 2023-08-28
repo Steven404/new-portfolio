@@ -151,7 +151,9 @@
     duration-300
     max-h-[0]
     overflow-hidden
-    opacity-0;
+    opacity-0
+    
+    lg:max-h-full;
   }
 
   .responsibilities {
