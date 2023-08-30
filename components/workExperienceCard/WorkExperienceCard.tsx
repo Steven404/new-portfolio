@@ -26,10 +26,10 @@ const WorkExperienceCard = ({
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
     >
-      <Text size="lg" weight={600} extra="lg:text-2xl">
+      <Text size="md" weight={600} extra="lg:text-2xl">
         {workExperience.jobTitle}
       </Text>
-      <Text size="md" weight={500} extra="mt-2.5">
+      <Text size="sm" weight={500} extra="mt-2.5">
         Employer:&nbsp;
         <a
           className="text-custom-blue"
@@ -60,7 +60,7 @@ const WorkExperienceCard = ({
             : 'hover-me-text'
         }
       >
-        <Text size="md" weight={500} color="halfBlack">
+        <Text size="sm" weight={500} color="halfBlack">
           Hover me!
         </Text>
       </div>

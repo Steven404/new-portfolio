@@ -21,7 +21,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
     const [imageHeight, setImageHeight] = useState<number>(200);
 
     useEffect(() => {
-      setImageHeight(width && width > 1024 ? 200 : 100);
+      setImageHeight(width && width > 1024 ? 150 : 100);
     }, [width]);
 
     return (
@@ -30,7 +30,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
         ref={ref}
         className="flex flex-col h-fit min-h-screen items-center w-full justify-between"
       >
-        <Text weight={500} size="xl" extra="mt-28">
+        <Text weight={500} size="lg" extra="mt-28">
           Contact
         </Text>
         <div className="w-full h-[75%] flex items-center justify-center px-6 sm:justify-start lg:mt-12">

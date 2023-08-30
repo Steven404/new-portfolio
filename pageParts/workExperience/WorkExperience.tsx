@@ -11,7 +11,7 @@ const WorkExperience = React.forwardRef<HTMLDivElement>(
       ref={ref}
       className="flex flex-col min-h-screen items-center"
     >
-      <Text weight={500} size="xl" extra="mt-28">
+      <Text weight={500} size="lg" extra="mt-28">
         Work Experience
       </Text>
       <div className="flex flex-wrap gap-20 mt-10 justify-evenly ">

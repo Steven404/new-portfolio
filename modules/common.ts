@@ -51,7 +51,7 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'Full Stack Software Engineer',
     location: 'Remote',
     description:
-      'I am currently working as a Full Stack Software engineer, working in a team that maintains and develops features for a web platform with thousands of daily active users.',
+      'I am currently working as a Full Stack Software engineer, working in a team that maintains code and develops features for a web platform with thousands of daily active users.',
     dateStarted: new Date('05/15/2023'),
     responsibilities: [
       'Develop HTML/CSS/JavaScript code as a front-end Engineer',
@@ -83,7 +83,7 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'IT Support (Internship)',
     location: 'Neoi Epivates, Thessaloniki, Greece',
     description:
-      'Six month internship at the municipality of Thermaikos. This was part of my studies at the Technological Education Institute I was attending. My position was IT support.',
+      'Six month internship at the municipality of Thermaikos. This internship was part of my studies at the Technological Education Institute I was attending. My position was IT support.',
     dateStarted: new Date('05/01/2021'),
     dateEnded: new Date('10/31/2021'),
     responsibilities: [
