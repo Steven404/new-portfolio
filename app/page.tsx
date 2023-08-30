@@ -1,18 +1,18 @@
-'use client'
+'use client';
 
-import AboutMe from '@/pageParts/aboutMe/AboutMe'
-import Home from '@/pageParts/home/Home'
-import { useRef, useState } from 'react'
-import { PageUrl, pages } from '@/modules/common'
-import { useParams, useRouter } from 'next/navigation'
-import Navbar from '@/components/navbar/Navbar'
-import WorkExperience from '@/pageParts/workExperience/WorkExperience'
-import MyProjects from '@/pageParts/myProjects/MyProjects'
+import AboutMe from '@/pageParts/aboutMe/AboutMe';
+import Home from '@/pageParts/home/Home';
+import { useRef, useState } from 'react';
+import { PageUrl, pages } from '@/modules/common';
+import { useParams, useRouter } from 'next/navigation';
+import Navbar from '@/components/navbar/Navbar';
+import WorkExperience from '@/pageParts/workExperience/WorkExperience';
+import MyProjects from '@/pageParts/myProjects/MyProjects';
 
 const App = () => {
-  const refs = useRef<Array<HTMLDivElement | null>>(new Array())
+  const refs = useRef<Array<HTMLDivElement | null>>(new Array());
 
-  const [activeLink, setActiveLink] = useState<PageUrl>('')
+  const [activeLink, setActiveLink] = useState<PageUrl>('');
 
   const handleScroll = () => {
     if (refs.current) {
@@ -21,13 +21,11 @@ const App = () => {
           ref &&
           Math.abs(ref.getBoundingClientRect().top) < window.innerHeight / 2
         ) {
-          setActiveLink(index === 0 ? '' : pages[index - 1].pageUrl)
+          setActiveLink(index === 0 ? '' : pages[index - 1].pageUrl);
         }
-      })
+      });
     }
-  }
-
-  console.log(activeLink)
+  };
 
   return (
     <div
@@ -41,7 +39,7 @@ const App = () => {
         <MyProjects ref={(element) => (refs.current[3] = element)} />
       </Navbar>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
