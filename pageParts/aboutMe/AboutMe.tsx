@@ -19,7 +19,7 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
             <i className="text-custom-black">full stack software engineer</i>
           </Text>
           <div className="flex justify-center px-16 lg:flex-col mt-20 lg:items-center lg:px-0 lg:mt-12">
-            <div className="w-[700px] flex flex-col xl:w-[50%] lg:w-[100%]">
+            <div className="max-w-[700px] flex flex-col xl:w-[50%] lg:w-[100%]">
               <Text size="lg" weight={500} extra="text-justify lg:text-2xl">
                 With 2 years of expirience as a full stack software engineer, I
                 specialize in developing fully functional web and mobile

@@ -58,7 +58,7 @@
     py-2
     px-5
     
-    md:hidden;
+    min-lg:hidden;
   }
 
   .dropdown-menu {
@@ -176,7 +176,14 @@
   }
 
   .contact-info {
-    @apply w-fit flex flex-col items-center cursor-pointer;
+    @apply custom-transition
+    duration-500
+    w-fit 
+    flex 
+    flex-col 
+    items-center 
+    cursor-pointer
+    betterhover:hover:scale-110;
   }
 }
 
