@@ -56,7 +56,9 @@
     right-0
     top-0
     py-2
-    px-5;
+    px-5
+    
+    md:hidden;
   }
 
   .dropdown-menu {
