@@ -19,7 +19,7 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
 
   const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false);
 
-  const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`);
+  const handleButtonClick = (pageUrl: string) => router.push(`/#${pageUrl}`);
 
   const handleButtonClickMobile = (pageUrl: string) => {
     handleButtonClick(pageUrl);

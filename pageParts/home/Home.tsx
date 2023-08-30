@@ -1,5 +1,5 @@
-import Text from '@/components/text/Text'
-import React from 'react'
+import Text from '@/components/text/Text';
+import React from 'react';
 
 const Home = React.forwardRef<HTMLDivElement>(
   // if Home had props, then they would replace the _ before the ,ref
@@ -21,8 +21,8 @@ const Home = React.forwardRef<HTMLDivElement>(
       </Text>
     </div>
   )
-)
+);
 
-Home.displayName = 'Home'
+Home.displayName = 'Home';
 
-export default Home
+export default Home;
