@@ -21,7 +21,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
     const [imageHeight, setImageHeight] = useState<number>(200);
 
     useEffect(() => {
-      setImageHeight(width > 1024 ? 200 : 100);
+      setImageHeight(width && width > 1024 ? 200 : 100);
     }, [width]);
 
     return (

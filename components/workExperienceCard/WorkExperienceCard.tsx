@@ -55,7 +55,9 @@ const WorkExperienceCard = ({
       </div>
       <div
         className={
-          isHovered || width < 1023 ? 'hover-me-text-hidden' : 'hover-me-text'
+          isHovered || (width && width < 1023)
+            ? 'hover-me-text-hidden'
+            : 'hover-me-text'
         }
       >
         <Text size="md" weight={500} color="halfBlack">
@@ -65,7 +67,7 @@ const WorkExperienceCard = ({
       {workExperience?.responsibilities ? (
         <div
           className={
-            isHovered || width < 1023
+            isHovered || (width && width < 1023)
               ? 'responsibilities'
               : 'responsibilities-hidden'
           }
