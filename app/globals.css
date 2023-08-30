@@ -95,7 +95,6 @@
 
   .styled-button {
     @apply styled-button-common
-    delay-500
     duration-300
     bottom-[120px];
   }
@@ -214,7 +213,7 @@
     duration-300
     ease-in-out
     h-fit
-    text-lg
+    text-xl
     py-2 px-3
     whitespace-nowrap
     cursor-pointer;
@@ -231,8 +230,7 @@
     cursor-pointer
     rounded-lg
     bg-custom-teal
-    betterhover:hover:scale-105
-    betterhover:hover:w-fit
+    betterhover:hover:scale-110
     betterhover:hover:shadow-md
     
     lg:fixed;

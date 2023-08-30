@@ -1,30 +1,30 @@
-'use client'
+'use client';
 
-import Text from '../text/Text'
-import { PageUrl, pages } from '@/modules/common'
-import { useRouter } from 'next/navigation'
-import { ReactNode, useState } from 'react'
-import { Squash as Hamburger } from 'hamburger-react'
+import Text from '../text/Text';
+import { PageUrl, pages } from '@/modules/common';
+import { useRouter } from 'next/navigation';
+import { ReactNode, useState } from 'react';
+import { Squash as Hamburger } from 'hamburger-react';
 
 const isActiveClass = (pageUrl: PageUrl, currentLocation: PageUrl): boolean =>
-  pageUrl === currentLocation
+  pageUrl === currentLocation;
 
 interface NavbarPropsType {
-  children: ReactNode
-  activeLink: PageUrl
+  children: ReactNode;
+  activeLink: PageUrl;
 }
 
 const Navbar = ({ children, activeLink }: NavbarPropsType) => {
-  const router = useRouter()
+  const router = useRouter();
 
-  const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false)
+  const [isDropdownShown, setIsDropdownShown] = useState<boolean>(false);
 
-  const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`)
+  const handleButtonClick = (pageUrl: string) => router.push(`#${pageUrl}`);
 
   const handleButtonClickMobile = (pageUrl: string) => {
-    handleButtonClick(pageUrl)
-    setTimeout(() => setIsDropdownShown(false), 500)
-  }
+    handleButtonClick(pageUrl);
+    setTimeout(() => setIsDropdownShown(false), 500);
+  };
 
   return (
     <div className="font-barlow">
@@ -63,7 +63,9 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
           ))}
         </div>
         <a
-          className={isDropdownShown ? 'styled-button' : 'styled-button-hidden'}
+          className={
+            isDropdownShown ? 'styled-button delay-500' : 'styled-button-hidden'
+          }
           href="/CV.pdf"
           target="blank"
         >
@@ -97,6 +99,6 @@ const Navbar = ({ children, activeLink }: NavbarPropsType) => {
       </div>
       <div>{children}</div>
     </div>
-  )
-}
-export default Navbar
+  );
+};
+export default Navbar;
