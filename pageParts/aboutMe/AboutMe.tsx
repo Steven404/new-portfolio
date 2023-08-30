@@ -15,7 +15,7 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
       <div className="flex flex-col justify-around items-center">
         <div className="flex flex-col justify-center items-center lg:px-6">
           <Text size="lg" color="blue" extra="mt-8 lg:text-2xl" weight={500}>
-            I am a young and enthusiastic&nbsp;
+            I am a young and passionate&nbsp;
             <i className="text-custom-black">full stack software engineer</i>
           </Text>
           <div className="flex justify-center px-16 lg:flex-col mt-20 lg:items-center lg:px-0 lg:mt-12">
