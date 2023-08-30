@@ -1,7 +1,7 @@
-import Text from '@/components/text/Text'
-import UnderConstruction from '@/public/under_construction.svg'
-import React from 'react'
-import Image from 'next/image'
+import Text from '@/components/text/Text';
+import UnderConstruction from '@/public/under_construction.svg';
+import React from 'react';
+import Image from 'next/image';
 
 const MyProjects = React.forwardRef<HTMLDivElement>(
   // if MyProjects had props, then they would replace the _ before the ,ref
@@ -9,7 +9,7 @@ const MyProjects = React.forwardRef<HTMLDivElement>(
     <div
       id="myProjects"
       ref={ref}
-      className="flex flex-col min-h-screen items-center"
+      className="flex flex-col min-h-screen items-center px-6"
     >
       <Text weight={500} size="xl" extra="mt-24">
         My Projects
@@ -22,8 +22,8 @@ const MyProjects = React.forwardRef<HTMLDivElement>(
       </div>
     </div>
   )
-)
+);
 
-MyProjects.displayName = 'MyProjects'
+MyProjects.displayName = 'MyProjects';
 
-export default MyProjects
+export default MyProjects;
