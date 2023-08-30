@@ -6,6 +6,12 @@ import GitHub from '@/public/img/github_mark.png';
 import LinkedIn from '@/public/img/linkedin.png';
 import Image from 'next/image';
 import useWindowDimensions from '@/modules/useWindowDimensions';
+import { toast } from 'react-toastify';
+
+const copyText = (text: string, type: string) => {
+  navigator.clipboard.writeText(text);
+  toast(`My ${type} is copied to your clipboard!`);
+};
 
 const Contact = React.forwardRef<HTMLDivElement>(
   // if Contact had props, then they would replace the _ before the ,ref
@@ -31,7 +37,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
           <div className="flex flex-wrap gap-20 mt-10 justify-evenly w-full">
             <div
               className="contact-info"
-              onClick={() => navigator.clipboard.writeText('+306948518120')}
+              onClick={() => copyText('+306948518120', 'mobile number')}
             >
               <Image
                 priority
@@ -46,7 +52,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
             <div
               className="contact-info"
               onClick={() =>
-                navigator.clipboard.writeText('stefanosmichelakis@gmail.com')
+                copyText('stefanosmichelakis@gmail.com', 'mobile number')
               }
             >
               <Image priority src={Mail} alt="Email" height={imageHeight} />
