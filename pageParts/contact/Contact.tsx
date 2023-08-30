@@ -10,7 +10,7 @@ import { toast } from 'react-toastify';
 
 const copyText = (text: string, type: string) => {
   navigator.clipboard.writeText(text);
-  toast(`My ${type} is copied to your clipboard!`);
+  toast(`My ${type} is copied to your clipboard!`, { type: 'success' });
 };
 
 const Contact = React.forwardRef<HTMLDivElement>(
@@ -51,9 +51,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
             </div>
             <div
               className="contact-info"
-              onClick={() =>
-                copyText('stefanosmichelakis@gmail.com', 'mobile number')
-              }
+              onClick={() => copyText('stefanosmichelakis@gmail.com', 'email')}
             >
               <Image priority src={Mail} alt="Email" height={imageHeight} />
               <Text weight={500} color="blue" extra="mt-20 lg:mt-10">

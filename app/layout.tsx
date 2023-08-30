@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning>
         {children}
-        <ToastContainer />
+        <ToastContainer position="top-center" hideProgressBar />
       </body>
     </html>
   );
