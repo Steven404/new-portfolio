@@ -18,7 +18,7 @@ const WorkExperienceCard = ({
 }: WorkExperienceCardPropsType): JSX.Element => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
 
-  const { width, height } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
   return (
     <div
@@ -26,10 +26,10 @@ const WorkExperienceCard = ({
       onMouseOver={() => setIsHovered(true)}
       onMouseOut={() => setIsHovered(false)}
     >
-      <Text size="lg" weight={500}>
+      <Text size="lg" weight={600} extra="lg:text-2xl">
         {workExperience.jobTitle}
       </Text>
-      <Text size="sm" weight={500} extra="mt-2.5">
+      <Text size="md" weight={500} extra="mt-2.5">
         Employer:&nbsp;
         <a
           className="text-custom-blue"
@@ -39,14 +39,14 @@ const WorkExperienceCard = ({
           {workExperience.employer}
         </a>
       </Text>
-      <Text size="xs" extra="text-justify mt-2.5">
+      <Text size="sm" extra="text-justify mt-2.5">
         {workExperience.description}
       </Text>
       <div className="mt-2.5">
-        <Text size="xs" weight={500}>
+        <Text size="sm" weight={500}>
           From - Until:&nbsp;
         </Text>
-        <Text size="xs">
+        <Text size="sm">
           {formatDate(workExperience.dateStarted)} -&nbsp;
           {workExperience?.dateEnded
             ? formatDate(workExperience.dateEnded)
@@ -58,7 +58,7 @@ const WorkExperienceCard = ({
           isHovered || width < 1023 ? 'hover-me-text-hidden' : 'hover-me-text'
         }
       >
-        <Text size="sm" weight={500} color="halfBlack">
+        <Text size="md" weight={500} color="halfBlack">
           Hover me!
         </Text>
       </div>
