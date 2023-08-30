@@ -12,12 +12,12 @@ export const pages = [
     pageUrl: 'myProjects',
   },
   {
-    pageName: 'Contact Info',
-    pageUrl: 'contactInfo',
+    pageName: 'Contact ',
+    pageUrl: 'contact',
   },
-] as const
+] as const;
 
-export type PageUrl = (typeof pages)[number]['pageUrl'] | ''
+export type PageUrl = (typeof pages)[number]['pageUrl'] | '';
 
 export const technologies: Array<string> = [
   'ReactJS/NextJS',
@@ -31,17 +31,17 @@ export const technologies: Array<string> = [
   'MongoDB/Mongoose',
   'Oracle SQL/MySQL',
   'Jest',
-]
+];
 
 export interface WorkExperienceType {
-  employer: string
-  employerLink: string
-  jobTitle: string
-  location: string
-  description: string
-  dateStarted: Date
-  dateEnded?: Date
-  responsibilities?: Array<string>
+  employer: string;
+  employerLink: string;
+  jobTitle: string;
+  location: string;
+  description: string;
+  dateStarted: Date;
+  dateEnded?: Date;
+  responsibilities?: Array<string>;
 }
 
 export const workExperience: Array<WorkExperienceType> = [
@@ -54,9 +54,9 @@ export const workExperience: Array<WorkExperienceType> = [
       'I am currently working as a Full Stack Software engineer, working in a team that maintains and develops features for a web platform with thousands of daily active users.',
     dateStarted: new Date('05/15/2023'),
     responsibilities: [
-      'Develop HTML/CSS/JavaScript code as a front-end Engineer.',
-      'Design and implement APIs with NodeJS and ExpressJS.',
-      'Write automated integration tests using Jest.',
+      'Develop HTML/CSS/JavaScript code as a front-end Engineer',
+      'Design and implement APIs with NodeJS and ExpressJS',
+      'Write automated integration tests using Jest',
     ],
   },
   {
@@ -69,11 +69,11 @@ export const workExperience: Array<WorkExperienceType> = [
     dateStarted: new Date('03/28/2022'),
     dateEnded: new Date('05/11/2023'),
     responsibilities: [
-      'Be a productive part of an Agile team.',
-      'Develop new features and maintain already existing code for pre-existing features based on ReactJS/NextJS and Typescript.',
-      'Write automated e2e and integration tests using Cypress IO.',
-      'Implement CI for automated tests using github actions.',
-      'Build back-end software using NodeJS, express and MongoDB.',
+      'Be a productive part of an Agile team',
+      'Develop new features and maintain already existing code for pre-existing features based on ReactJS/NextJS and Typescript',
+      'Write automated e2e and integration tests using Cypress IO',
+      'Implement CI for automated tests using github actions',
+      'Build back-end software using NodeJS, express and MongoDB',
       'Design and implement GraphQL APIs',
     ],
   },
@@ -83,8 +83,13 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'IT Support (Internship)',
     location: 'Neoi Epivates, Thessaloniki, Greece',
     description:
-      'Six month internship at the municipality of Thermaikos. This internship was part of my studies at the Technological Education Institute I was attending. My position was IT support.',
+      'Six month internship at the municipality of Thermaikos. This was part of my studies at the Technological Education Institute I was attending. My position was IT support.',
     dateStarted: new Date('05/01/2021'),
     dateEnded: new Date('10/31/2021'),
+    responsibilities: [
+      'Troubleshoot hardware and software',
+      'Cooporate with my supervisor while working on solutions',
+      'Communicate with coleagues and walk them through solutions to their technical problems',
+    ],
   },
-]
+];

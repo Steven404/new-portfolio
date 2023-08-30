@@ -22,12 +22,12 @@ module.exports = {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-        'clean-office': "url('/img/bg-04.jpg')",
-        'white-mountains': "url('/img/bg-05.jpg')",
         'white-desk': "url('/img/bg-06.jpg')",
-        'clean-desk': "url('/img/bg-07.jpg')",
-        mac: "url('/img/bg-08.jpg')",
-        'under-construction': "url('/under_construction.svg')",
+        'under-construction': "url('/img/under_construction.svg')",
+        'phone-call': "url('/img/phone_call.svg')",
+        mail: "url('/img/mail.svg')",
+        linkedin: "url('/img/linkedIn.png')",
+        github: "url('/img/GitHub_Logo.png')",
       },
       colors: {
         'custom-black': '#181818',
@@ -62,10 +62,12 @@ module.exports = {
       sm: { max: '639px' },
       // => @media (max-width: 639px) { ... }
 
+      'min-sm': { min: '639px' },
+
       'min-lg': { min: '1023px' },
 
       betterhover: { raw: '(hover: hover)' },
     },
   },
   plugins: [],
-}
+};

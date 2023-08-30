@@ -8,6 +8,7 @@ import { useParams, useRouter } from 'next/navigation';
 import Navbar from '@/components/navbar/Navbar';
 import WorkExperience from '@/pageParts/workExperience/WorkExperience';
 import MyProjects from '@/pageParts/myProjects/MyProjects';
+import Contact from '@/pageParts/contact/Contact';
 
 const App = () => {
   const refs = useRef<Array<HTMLDivElement | null>>(new Array());
@@ -37,6 +38,7 @@ const App = () => {
         <AboutMe ref={(element) => (refs.current[1] = element)} />
         <WorkExperience ref={(element) => (refs.current[2] = element)} />
         <MyProjects ref={(element) => (refs.current[3] = element)} />
+        <Contact ref={(element) => (refs.current[4] = element)} />
       </Navbar>
     </div>
   );

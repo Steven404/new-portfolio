@@ -1,5 +1,5 @@
 import Text from '@/components/text/Text';
-import UnderConstruction from '@/public/under_construction.svg';
+import UnderConstruction from '@/public/img/under_construction.svg';
 import React from 'react';
 import Image from 'next/image';
 
@@ -11,7 +11,7 @@ const MyProjects = React.forwardRef<HTMLDivElement>(
       ref={ref}
       className="flex flex-col min-h-screen items-center px-6"
     >
-      <Text weight={500} size="xl" extra="mt-24">
+      <Text weight={500} size="xl" extra="mt-28">
         My Projects
       </Text>
       <Text size="md" color="blue" extra="mt-6" weight={500}>
