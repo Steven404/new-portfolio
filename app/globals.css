@@ -174,7 +174,7 @@
   }
 
   .contact-info {
-    @apply w-fit flex flex-col items-center;
+    @apply w-fit flex flex-col items-center cursor-pointer;
   }
 }
 

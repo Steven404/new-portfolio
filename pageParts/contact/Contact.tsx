@@ -1,5 +1,5 @@
 import Text from '@/components/text/Text';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PhoneCall from '@/public/img/phone_call.svg';
 import Mail from '@/public/img/mail.svg';
 import GitHub from '@/public/img/github_mark.png';
@@ -12,7 +12,11 @@ const Contact = React.forwardRef<HTMLDivElement>(
   (_, ref): JSX.Element => {
     const { width } = useWindowDimensions();
 
-    useEffect(() => {}, []);
+    const [imageHeight, setImageHeight] = useState<number>(200);
+
+    useEffect(() => {
+      setImageHeight(width > 1024 ? 200 : 100);
+    }, [width]);
 
     return (
       <div
@@ -23,48 +27,59 @@ const Contact = React.forwardRef<HTMLDivElement>(
         <Text weight={500} size="xl" extra="mt-28">
           Contact
         </Text>
-        <div className="w-full h-[75%] flex items-center justify-center px-6 sm:justify-start">
+        <div className="w-full h-[75%] flex items-center justify-center px-6 sm:justify-start lg:mt-12">
           <div className="flex flex-wrap gap-20 mt-10 justify-evenly w-full">
-            <div className="contact-info">
-              <Image priority src={PhoneCall} alt="Phone" height={200} />
-              <Text
-                onClick={() => navigator.clipboard.writeText('+306948518120')}
-                weight={500}
-                color="blue"
-                extra="cursor-pointer mt-20"
-              >
+            <div
+              className="contact-info"
+              onClick={() => navigator.clipboard.writeText('+306948518120')}
+            >
+              <Image
+                priority
+                src={PhoneCall}
+                alt="Phone"
+                height={imageHeight}
+              />
+              <Text weight={500} color="blue" extra="mt-20 lg:mt-10">
                 +306948518120
               </Text>
             </div>
-            <div className="contact-info">
-              <Image priority src={Mail} alt="Email" height={200} />
-              <Text
-                onClick={() =>
-                  navigator.clipboard.writeText('stefanosmichelakis@gmail.com')
-                }
-                weight={500}
-                color="blue"
-                extra="cursor-pointer mt-20"
-              >
+            <div
+              className="contact-info"
+              onClick={() =>
+                navigator.clipboard.writeText('stefanosmichelakis@gmail.com')
+              }
+            >
+              <Image priority src={Mail} alt="Email" height={imageHeight} />
+              <Text weight={500} color="blue" extra="mt-20 lg:mt-10">
                 stefanosmichelakis@gmail.com
               </Text>
             </div>
-            <div className="contact-info">
-              <Image priority src={GitHub} alt="GitHub" height={200} />
-              <Text weight={500} color="blue" extra="mt-20">
-                <a href="https://github.com/Steven404" target="blank">
+            <a href="https://github.com/Steven404" target="blank">
+              <div className="contact-info">
+                <Image
+                  priority
+                  src={GitHub}
+                  alt="GitHub"
+                  height={imageHeight}
+                />
+                <Text weight={500} color="blue" extra="mt-20 lg:mt-10">
                   Steven404
-                </a>
-              </Text>
-            </div>
-            <div className="contact-info">
-              <Image priority src={LinkedIn} alt="GitHub" height={200} />
-              <Text weight={500} color="blue" extra="mt-20">
-                <a href="https://github.com/Steven404" target="blank">
+                </Text>
+              </div>
+            </a>
+            <a href="https://github.com/Steven404" target="blank">
+              <div className="contact-info">
+                <Image
+                  priority
+                  src={LinkedIn}
+                  alt="LinkedIn"
+                  height={imageHeight}
+                />
+                <Text weight={500} color="blue" extra="mt-20 lg:mt-10">
                   Stefanos Michelakis
-                </a>
-              </Text>
-            </div>
+                </Text>
+              </div>
+            </a>
           </div>
         </div>
         <div className="h-[200px] w-full bg-gradient-to-b from-white to-custom-blue opacity-80 bottom-0 z-[-5]" />
