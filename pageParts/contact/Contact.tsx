@@ -7,6 +7,8 @@ import LinkedIn from '@/public/img/linkedin.png';
 import Image from 'next/image';
 import useWindowDimensions from '@/modules/useWindowDimensions';
 import { toast } from 'react-toastify';
+import { isMobile } from 'react-device-detect';
+import { useRouter } from 'next/navigation';
 
 const copyText = (text: string, type: string) => {
   navigator.clipboard.writeText(text);
@@ -16,6 +18,7 @@ const copyText = (text: string, type: string) => {
 const Contact = React.forwardRef<HTMLDivElement>(
   // if Contact had props, then they would replace the _ before the ,ref
   (_, ref): JSX.Element => {
+    const router = useRouter();
     const { width } = useWindowDimensions();
 
     const [imageHeight, setImageHeight] = useState<number>(200);
@@ -37,7 +40,11 @@ const Contact = React.forwardRef<HTMLDivElement>(
           <div className="flex flex-wrap gap-20 mt-10 justify-evenly w-full">
             <div
               className="contact-info"
-              onClick={() => copyText('+306948518120', 'mobile number')}
+              onClick={() =>
+                isMobile
+                  ? router.push('tel:+306948518120')
+                  : copyText('+306948518120', 'mobile number')
+              }
             >
               <Image
                 priority
@@ -51,7 +58,11 @@ const Contact = React.forwardRef<HTMLDivElement>(
             </div>
             <div
               className="contact-info"
-              onClick={() => copyText('stefanosmichelakis@gmail.com', 'email')}
+              onClick={() =>
+                isMobile
+                  ? router.push('tel:+306948518120')
+                  : copyText('stefanosmichelakis@gmail.com', 'email')
+              }
             >
               <Image priority src={Mail} alt="Email" height={imageHeight} />
               <Text weight={500} color="blue" extra="mt-20 lg:mt-10">
