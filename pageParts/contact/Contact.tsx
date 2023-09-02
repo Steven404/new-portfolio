@@ -60,7 +60,7 @@ const Contact = React.forwardRef<HTMLDivElement>(
               className="contact-info"
               onClick={() =>
                 isMobile
-                  ? router.push('tel:+306948518120')
+                  ? router.push('mailto:stefanosmichelakis@gmail.com')
                   : copyText('stefanosmichelakis@gmail.com', 'email')
               }
             >
