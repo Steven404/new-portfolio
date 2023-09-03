@@ -69,7 +69,10 @@ const Contact = React.forwardRef<HTMLDivElement>(
                 stefanosmichelakis@gmail.com
               </Text>
             </div>
-            <a href="https://github.com/Steven404" target="blank">
+            <a
+              href="https://www.linkedin.com/in/stefanos-michelakis-65884b230/"
+              target="blank"
+            >
               <div className="contact-info">
                 <Image
                   priority
