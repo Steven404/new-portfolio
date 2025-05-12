@@ -21,16 +21,18 @@ export type PageUrl = (typeof pages)[number]['pageUrl'] | '';
 
 export const technologies: Array<string> = [
   'ReactJS/NextJS',
-  'Angular 14',
+  'React Native',
+  'Angular (14, 17, 19)',
   'Rxjs',
   'Typescript',
-  'Cypress',
   'NodeJS',
   'Express',
   'GraphQL',
   'MongoDB/Mongoose',
   'Oracle SQL/MySQL',
+  'PostreSQL',
   'Jest',
+  'Cypress',
 ];
 
 export interface WorkExperienceType {
@@ -51,13 +53,13 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'Full Stack Software Engineer',
     location: 'Remote',
     description:
-      'In this role I was collaborating with other developers and testers in a team that maintained and developed features for a web platform with thousands of daily active users.',
+      'In this role, I collaborated with a cross-functional team of developers and QA engineers to maintain and enhance a high-traffic web platform serving thousands of daily active users.',
     dateStarted: new Date('05/15/2023'),
     dateEnded: new Date('09/30/2023'),
     responsibilities: [
-      'Develop HTML/CSS/JavaScript code as a front-end Engineer',
-      'Design and implement APIs with NodeJS and ExpressJS',
-      'Write automated integration tests using Jest',
+      'Developing responsive and accessible front-end components using HTML, CSS, and JavaScript.',
+      'Designing and implementing RESTful APIs with Node.js and Express.js to support new platform features',
+      'Writing automated integration tests using Jest to ensure the reliability and robustness of back-end services',
     ],
   },
   {
@@ -70,12 +72,13 @@ export const workExperience: Array<WorkExperienceType> = [
     dateStarted: new Date('03/28/2022'),
     dateEnded: new Date('05/11/2023'),
     responsibilities: [
-      'Be a productive part of an Agile team',
-      'Develop new features and maintain already existing code for pre-existing features based on ReactJS/NextJS and Typescript',
-      'Write automated e2e and integration tests using Cypress IO',
-      'Implement CI for automated tests using github actions',
-      'Build back-end software using NodeJS, express and MongoDB',
-      'Design and implement GraphQL APIs',
+      'Being a productive member of an Agile team',
+      'Developing code for new features and maintaining already existing code based on ReactJS and Typescript',
+      'Writing automated e2e and integration tests using Cypress IO',
+      'Implementation of CI for automated tests using github actions',
+      'Building back-end software using NodeJS and MongoDB',
+      'Designing and implementing GraphQL APIs',
+      'Writing automated integration tests using Jest',
     ],
   },
   {
@@ -84,7 +87,7 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'IT Support (Internship)',
     location: 'Neoi Epivates, Thessaloniki, Greece',
     description:
-      'Six month internship at the municipality of Thermaikos. This internship was part of my studies at the Technological Education Institute I was attending. My position was IT support.',
+      'Six month internship at the municipality of Thermaikos. This internship was part of my studies at the Technological Education Institute I was attending. My position was IT support',
     dateStarted: new Date('05/01/2021'),
     dateEnded: new Date('10/31/2021'),
     responsibilities: [
@@ -99,12 +102,13 @@ export const workExperience: Array<WorkExperienceType> = [
     jobTitle: 'Full Stack Software Engineer',
     location: 'Remote',
     description:
-      '',
+      'Currently employed as a Full Stack Software Engineer, I work across a wide range of web and mobile technologies, contributing to both new development and ongoing maintenance of applications.',
     dateStarted: new Date('10/01/2023'),
     responsibilities: [
-      'Maintain and develop code for an android app that utilizes a webview application which is based on HTML/CSS and JavaScript. More specifically, the front end runs mostly on Vanilla HTML/CSS and JavaScript while the backend runs on an ExpressJS API that retrieves and modifies data from a MySQL database',
-      'Research and develop Angular code utilizing RxJS and PrimeNG libraries while keeping documentation for future usages',
-      'Development of a mobile application portal based on React Native while utilizing a simple Google Firebase RTDB back end',
+      'Developing complex mobile applications using React Native, with a strong focus on React hooks for state and lifecycle management',
+      'Building and maintaining a form submission web application using Angular 17 with RxJS for reactive state management on the front end, and Express.js with PostgreSQL for back-end services, including authentication and data storage',
+      'Maintaining and adding new features to a legacy mobile application built with HTML, CSS, and JavaScript, deployed via an Android wrapper',
+      'Designing and developing a modern information management web application using Angular 19 with Signals for state handling, backed by Firebase Firestore and Firebase Authentication for real-time data and secure access control',
     ],
   },
 ];
