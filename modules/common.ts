@@ -104,6 +104,7 @@ export const workExperience: Array<WorkExperienceType> = [
     description:
       'Currently employed as a Full Stack Software Engineer, I work across a wide range of web and mobile technologies, contributing to both new development and ongoing maintenance of applications.',
     dateStarted: new Date('10/01/2023'),
+    dateEnded: new Date('10/06/2025'),
     responsibilities: [
       'Developing complex mobile applications using React Native, with a strong focus on React hooks for state and lifecycle management',
       'Building and maintaining a form submission web application using Angular 17 with RxJS for reactive state management on the front end, and Express.js with PostgreSQL for back-end services, including authentication and data storage',
