@@ -31,7 +31,7 @@ const AboutMe = React.forwardRef<HTMLDivElement>(
                 &nbsp;that implement cutting edge technologies.
               </Text>
               <Text size="sm" weight={400} extra="text-justify mt-5 lg:text-xl">
-                I thrive when working on my own but I excel when I'm cooperating
+                I thrive when working on my own and excel when I'm cooperating
                 with other developers in a structured team.
               </Text>
               <Text size="md" weight={400} extra="text-justify mt-5 lg:text-xl">
