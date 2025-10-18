@@ -11,7 +11,7 @@ import MyProjects from '@/pageParts/myProjects/MyProjects';
 import Contact from '@/pageParts/contact/Contact';
 
 const App = () => {
-  const refs = useRef<Array<HTMLDivElement | null>>(new Array());
+  const refs = useRef<Array<HTMLDivElement | null>>([]);
 
   const [activeLink, setActiveLink] = useState<PageUrl>('');
 
